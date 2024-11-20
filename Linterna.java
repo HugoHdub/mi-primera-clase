@@ -53,11 +53,25 @@ public class Linterna {
      * Cambia el estado de la linterna encendido/apagado.
      */
     public void alternarEncendido() {
-        if (encendido = true) {
+        if (encendido == true) {
             encendido = false;
         }
         else {
             encendido = true;
         }
+    }
+    
+    /**
+     * Muestra un mensaje con la batería restante de la linterna.
+     */
+    public void estadoLinterna (){
+        System.out.println ("La linterna tiene " + porcentajeBatería + "% restante.");
+    }
+    
+    /**
+     * Muestra un String que contiene el estado de la linterna.
+     */
+    public String getEstado () {
+        return "Marca: " + marcaLinterna + " Porcentaje: " + porcentajeBatería + " Encendido: " + encendido;
     }
 }
