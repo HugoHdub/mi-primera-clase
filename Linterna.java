@@ -65,7 +65,7 @@ public class Linterna {
      * Muestra un mensaje con la batería restante de la linterna.
      */
     public void estadoLinterna (){
-        System.out.println ("La linterna tiene " + porcentajeBatería + "% restante.");
+        System.out.println ("La marca de la linterna es: " + marcaLinterna + " La linterna tiene " + porcentajeBatería + " % restante. El estado ctual del encendido de la linterna es: " + encendido);
     }
     
     /**
