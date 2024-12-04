@@ -43,10 +43,10 @@ public class Linterna {
     }
     
     /**
-     * Modifica el porcentaje de batería de la linterna.
+     * Modifica el porcentaje de batería de la linterna. (Mod.1 y 2)
      */
     public void modificarPorcentajeBatería(int cambio) {
-        porcentajeBatería = cambio;
+        porcentajeBatería = porcentajeBatería - cambio;
     }
     
     /**
@@ -62,16 +62,25 @@ public class Linterna {
     }
     
     /**
-     * Muestra un mensaje con la batería restante de la linterna.
+     * Muestra un mensaje con la batería restante de la linterna. (Mod.3 y 5)
      */
-    public void estadoLinterna (){
-        System.out.println ("La marca de la linterna es: " + marcaLinterna + " La linterna tiene " + porcentajeBatería + " % restante. El estado ctual del encendido de la linterna es: " + encendido);
+    public void imprimirDetalles (){
+        if (encendido = true) {
+            System.out.println ("La marca de la linterna es: " + marcaLinterna + " La linterna tiene " + porcentajeBatería + " % restante. La linterna está encendida.");
+        }
+        else {
+            System.out.println ("La marca de la linterna es: " + marcaLinterna + " La linterna tiene " + porcentajeBatería + " % restante. La linterna está apagada.");
+        }
     }
     
     /**
-     * Muestra un String que contiene el estado de la linterna.
+     * Muestra un String que contiene el estado de la linterna. (Mod.4)
      */
     public String getEstado () {
-        return "Marca: " + marcaLinterna + " Porcentaje: " + porcentajeBatería + " Encendido: " + encendido;
+        if (encendido = true) {
+            return "Marca: " + marcaLinterna + " Porcentaje: " + porcentajeBatería + " Estado: Encendida";
+        } else {
+            return "Marca: " + marcaLinterna + " Porcentaje: " + porcentajeBatería + " Estado: Apagada";
+        }
     }
 }
